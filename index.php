@@ -17,6 +17,7 @@
             <a href="#education">Education</a>
             <a href="#services">Services</a>
             <a href="#contact">Contact</a>
+            <a href="admin/login.php">Admin</a>
         </nav>
     </header>
 

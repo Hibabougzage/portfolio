@@ -1,11 +1,5 @@
 <?php
-session_start();
 include '../includes/db_connect.php';
-
-if (!isset($_SESSION['admin_logged_in'])) {
-    header("Location: login.php");
-    exit();
-}
 
 $result = $conn->query("SELECT * FROM messages ORDER BY created_at DESC");
 if (!$result) {
@@ -24,7 +18,6 @@ if (!$result) {
 <body>
     <div class="dashboard-container">
         <h2>Admin Dashboard</h2>
-        <a href="logout.php">Logout</a>
         <h3>Contact Messages</h3>
         <?php if (isset($error)): ?>
             <p style="color: red;"><?php echo $error; ?></p>
